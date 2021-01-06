@@ -21,7 +21,7 @@ Everything here is pretty straightforward.
 - And, Or operators
 - Variable Scope (lexical scoping)
 
-## Section 4 - Javascript Basics: Variables and Flow Control
+## Section 4 - Javascript Functions
 
 ### What did I learn? 
 
@@ -35,4 +35,20 @@ Everything here is pretty straightforward.
 	- No difference between double and single quotes in JS.
 	- Use the dollar sign and curly braces to inject JS into a template string ` ... `
 - Made a simple grade calculator.
+
+## Section 5 - Javascript Objects
+
+### What did I learn? 
+
+- How to define objects and use functions which return objects
+- Simple expense tracking exercise 
+- Methods on objects
+- The This keyword
+- The const
+- The Var
+
+## Section 6 - Javascript Arrays
+
+### What did I learn? 
+
 
