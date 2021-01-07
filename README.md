@@ -51,4 +51,13 @@ Everything here is pretty straightforward.
 
 ### What did I learn? 
 
+- How to define arrays
+- Methods: push, pop, shift and unshift, splice
+- forEach and callback functions
+- For loops 
+- IndexOf 
+- findIndex()or find() for arrays of objects
+- filter() to return a new array of objects which match some condition
+- The sort() method
+- Used new knowledge to add methods to the Expense Tracker, Notes and ToDo list apps
 
