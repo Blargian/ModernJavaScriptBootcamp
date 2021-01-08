@@ -61,3 +61,21 @@ Everything here is pretty straightforward.
 - The sort() method
 - Used new knowledge to add methods to the Expense Tracker, Notes and ToDo list apps
 
+## Section 7 - Javascript in the Browser
+
+### What did I learn? 
+
+- Setting up a webserver with live-server
+- Linking html and javascript using "<script>"
+- About the DOM (Document Object Model)
+- Using querySelector, querySelectorAll
+- Removing elements with remove
+- Adding elements with createElement and appendChild
+- addEventListener
+- Using IDs to target more specifically
+- Filtering data based on some user input
+- Working with Forms
+- Select dropdowns
+
+
+

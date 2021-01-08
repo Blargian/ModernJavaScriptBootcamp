@@ -1,0 +1,8 @@
+
+#to-dos .complete{
+    color: green;
+}
+
+#to-dos .incomplete{
+    color: red;
+}
