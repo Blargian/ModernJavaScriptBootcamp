@@ -1,22 +1,19 @@
+'use strict'
+
 //getSavedTodos
-const getSavedTodos = function(){
+const getSavedTodos = () =>{
     const todoJSON = localStorage.getItem('toDo')
-    
-    if(todoJSON!==null){
-        return JSON.parse(todoJSON)
-    } else {
-        return []
-    }
+    return todoJSON ? JSON.parse(todoJSON) : []
 }
 //saveTodos
-const saveTodos = function(todolist){
+const saveTodos = (todolist) =>{
     localStorage.setItem('toDo',JSON.stringify(todolist))
 }
 //renderTodos
 
 
-const renderToDos = function(todolist, filters){
-    const filteredToDos = todolist.filter(function(list){
+const renderToDos = (todolist, filters) =>{
+    const filteredToDos = todolist.filter((list)=>{
         const searchTextMatch = list.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideComplete || !list.completed
 
@@ -29,17 +26,16 @@ const renderToDos = function(todolist, filters){
     //     document.querySelector('#to-dos').appendChild(generateTodoDOM(todo))
     // })
 
-    Object.keys(filteredToDos).forEach(function(key){
+    Object.keys(filteredToDos).forEach((key)=>{
         document.querySelector('#to-dos').appendChild(generateTodoDOM(filteredToDos[key]))
     })
 
     }
 
 //This function removes a toDo item
-const removeToDo = function (id){
-    const index = toDo.findIndex(function(item){
-        return item.id === id
-    })
+const removeToDo = (id) =>{
+
+    const index = toDo.findIndex((item)=>item.id === id)
 
     toDo.splice(index,1)
     saveTodos(toDo)
@@ -47,16 +43,13 @@ const removeToDo = function (id){
 }
 
 //Toggle to do button
-const toggleToDo = function (id){
-    const index = toDo.findIndex(function(item){
-        return item.id === id
-    })
-
+const toggleToDo = (id) =>{
+    const index = toDo.findIndex((item) => item.id === id)
     toDo[index].completed = !toDo[index].completed
 }
 
 //generateTodoDOM
-const generateTodoDOM = function(toDoObject){
+const generateTodoDOM = (toDoObject)=>{
 
         //create the container element 
         const toDoItem = document.createElement('div') 
@@ -64,7 +57,7 @@ const generateTodoDOM = function(toDoObject){
         const checkBox = document.createElement('input')
         checkBox.setAttribute('type','checkbox')
         checkBox.checked = toDoObject.completed
-        checkBox.addEventListener('click',function(){
+        checkBox.addEventListener('click',()=>{
             toggleToDo(toDoObject.id)
             renderToDos(toDo,filters)
             saveTodos(toDo)
@@ -75,7 +68,7 @@ const generateTodoDOM = function(toDoObject){
         //create the cancel button
         const cancel = document.createElement('button')
         cancel.textContent='X'
-        cancel.addEventListener('click',function(){
+        cancel.addEventListener('click',()=>{
             removeToDo(toDoObject.id)
         })
 
@@ -90,10 +83,10 @@ const generateTodoDOM = function(toDoObject){
 //Print summary of how many todos are left in a paragraph
 
 
-const generateSummaryDOM = function(todo){
+const generateSummaryDOM = (todo) =>{
     let left = 0
 
-    todo.forEach(function(item,index){
+    todo.forEach((item,index)=>{
         if(!item.completed){
             left = left+1
         }

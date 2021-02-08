@@ -1,6 +1,8 @@
+'use strict'
+
 let toDo = getSavedTodos()
 
-document.querySelector('#todo-button').addEventListener('click',function(e){
+document.querySelector('#todo-button').addEventListener('click',(e) => {
     console.log('Added a ToDo')
 })
 
@@ -11,12 +13,12 @@ const filters = {
 
 renderToDos(toDo,filters)
 
-document.querySelector('#filter-todo').addEventListener('input',function(e){
+document.querySelector('#filter-todo').addEventListener('input',(e) =>{
     filters.searchText = e.target.value
     renderToDos(toDo,filters)
 })
 
-document.querySelector('#new-todo-form').addEventListener('submit',function(e){
+document.querySelector('#new-todo-form').addEventListener('submit',(e) =>{
     e.preventDefault()
     toDo.push({
         id:uuidv4(),
@@ -27,7 +29,7 @@ document.querySelector('#new-todo-form').addEventListener('submit',function(e){
     e.target.elements.toDo.value = ''
 })
 
-document.querySelector('#hide-completed').addEventListener('change',function(e){
+document.querySelector('#hide-completed').addEventListener('change',(e) =>{
     e.target.checked
         filters.hideComplete = e.target.checked
         renderToDos(toDo,filters)

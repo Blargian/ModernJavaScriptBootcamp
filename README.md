@@ -90,3 +90,23 @@ Everything here is pretty straightforward.
 - JavaScript Date objects
 - Using Moment.js library 
 
+## Section 9 - Expanding Our Javascript Knowledge
+
+### What did I learn? 
+
+- Arrow functions and shorthand for single line returns
+- Arguments and the this keyword only exist in normal functions
+- Refactored ToDo app and Notes app to use arrow function syntax
+- The conditional operator
+- Truthy-Falsy values and how to take advantage of that for checks of if something exists or not. 
+- Type-coercion
+- typeof 123 (evalutates to 'number')
+- using throw 'error description' and Error('error description')
+- The Try Catch statement
+- Enabling strict mode: Add 'use strict' to the top of the file
+
+## Section 10 - Advanced Objects and Functions
+
+### What did I learn? 
+
+- 
