@@ -11,12 +11,13 @@
     <input id="filter-todo" type="text" placeholder="Search To Do">
     <button id="todo-button">To do</button>
     <div id="to-dos">
+        <div></div>
         <!--Dynamic insert here-->
     </div>
  
     <form id="new-todo-form">
         <input type="text" placeholder="Enter something to do" name="toDo">
-        <button>Submit</button>
+        <button>Add</button>
     </form>
 
     <label id="hide-completed">
@@ -24,6 +25,8 @@
         Click to hide completed
     </label>
 
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="./todo-functions.js"></script>
     <script src="./todo-app.js"></script>
 </body>
 </html>

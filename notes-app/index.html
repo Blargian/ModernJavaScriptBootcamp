@@ -9,11 +9,12 @@
 <body>
     <h1>Notes App</h1>
     <h2>Take notes</h2>
+    <p>Search for a note:</p>
     <input id="search-text" type="text">
     <div id="notes">
         <!--Dynamic insert-->
     </div>
-    <button id="create-note">Create Note</button>
+    <button id="create-note">Create Note</button>   
 
     <select id="filter-by">
         <option value="byEdited">Sort by last edited</option>
@@ -21,6 +22,10 @@
         <option value="byAlphabetical">Sort alphabetically</option>
     </select>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="./notes-functions.js"></script>
     <script src="./notes-app.js"></script>
+
 </body>
 </html>

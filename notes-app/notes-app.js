@@ -1,62 +1,44 @@
-// // DOM - Document Object Model
-
-// const p = document.querySelector('p') //matches the first one
-// console.log(p) //results in Null? -> elements haven't been parsed yet
-// // hence why we place script at the end of the body
-
-// // Query all and remove
-
-// const allP = document.querySelectorAll('p')
-// console.log(allP)
-// allP.forEach(function(p,index){
-//     p.textContent = `Bob ${index +1}`
-// })
-
-//Adding a new element
-
-const myNotes = [{
-    title: 'My Holiday Plans',
-    body: '',
-},{
-    title: 'Fitness Goals 2021',
-    body: 'oh my',
-},{
-    title: 'My dear Suzy Jenkins',
-    body: 'my my my',
-}]
+let notes = getSavedNotes()
 
 const filters={
-    searchText: ''
+    searchText: '',
+    sortBy: 'byEdited',
 }
 
-const renderNotes = function (notes,filters){
-    const filteredNotes = notes.filter(function(note){
-        return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
-    })
-
-    console.log(filteredNotes)
-
-    document.querySelector('#notes').innerHTML = ''
-
-    filteredNotes.forEach(function(note){
-        
-        let noteElement = document.createElement('p')
-        noteElement.textContent = note.title
-        document.querySelector('#notes').appendChild(noteElement)
-    })
-}
-
-renderNotes(myNotes,filters)
+renderNotes(notes,filters)
 
 document.querySelector('#create-note').addEventListener('click', function(e){
-    console.log(e.target.textContent = 'The Button was clicked')
+    const id = uuidv4()
+    const timestamp = moment().valueOf()
+    notes.push({
+        id:id,
+        title:'',
+        body:'',
+        createdAt: timestamp, 
+        updatedAt: timestamp,
+    })
+    saveNote(notes)
+    location.assign(`/edit.html#${notes[notes.length-1].id}`)
 })
 
 document.querySelector('#search-text').addEventListener('input',function(e){
     filters.searchText = e.target.value
-    renderNotes(myNotes,filters)
+    renderNotes(notes,filters)
 })
 
-document.querySelector('#filter-by').addEventListener('çhange',function(e){
-    console.log(e.target.value)
+document.querySelector('#filter-by').addEventListener('change',function(e){
+    filters.sortBy = e.target.value
+    debugger;
+    renderNotes(notes,filters)
 })
+
+window.addEventListener('storage',function(e){
+    if(e.key === 'notes'){
+        notes = JSON.parse(e.newValue)
+        renderNotes(notes,filters)
+    }
+})
+
+//1. Add createdAt and updatedAt to the new notes (store timestamp)
+//2. Update updatedAt when someone edits a title or body
+//3. Delete all old notes before testing 

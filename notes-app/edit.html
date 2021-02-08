@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+</head>
+<body>
+    <a href="./index.html">Home</a>
+    <input id="note-title" placeholder="Note title" type="text" />
+    <p>Created at: <span id="#created-at"></span></p>
+    <p>Last edited: <span id="#updated-at"></span></p>
+    <textarea id="note-body">Enter note body</textarea>
+    <button id="remove-note">Click to remove</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js"></script>
+    <script src="notes-functions.js"></script>
+    <script src="notes-edit.js"></script>
+</body>
+</html>

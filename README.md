@@ -77,5 +77,16 @@ Everything here is pretty straightforward.
 - Working with Forms
 - Select dropdowns
 
+## Section 8 - Data Storage, Libraries 
 
+### What did I learn? 
+- CRUD: Create Read Update Delete
+- The local storage object
+- .setItem(), .getItem() for applying CRUD operations
+- Refactoring code and best practices 
+- the debugger statement
+- window and setting up event listeners 'storage' for data persistance 
+- Introduced the 'new' keyword
+- JavaScript Date objects
+- Using Moment.js library 
 
