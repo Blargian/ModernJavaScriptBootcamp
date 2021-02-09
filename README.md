@@ -109,4 +109,14 @@ Everything here is pretty straightforward.
 
 ### What did I learn? 
 
-- 
+- The new keyword
+- Constructor functions
+- Convention -> Upper case for constructors or objects
+- Arrow functions allows access to the 'this' of the parent function
+- How prototypical inheritance works in JS 
+- JS primitives: String, Number, Boolean, Null, undefined (these are not objects)
+- Hangman challenge game
+- Classes, constructor() syntax 
+- Subclasses using the 'extends' keyword
+- Accessing parent constructor using super()
+- Getters and Setters 
