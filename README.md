@@ -120,3 +120,19 @@ Everything here is pretty straightforward.
 - Subclasses using the 'extends' keyword
 - Accessing parent constructor using super()
 - Getters and Setters 
+
+## Section 11 - Asynchronous JavaScript
+
+### What did I learn? 
+
+- How to make requests to APIs using XMLHttpRequest()
+- The callback pattern and how it helps us with asychronous requests
+- Small example of fetching data from the api restcountries.eu
+- Working with closures 
+- Currying functions 
+- Working with Promises
+- Promise chaining
+- IP address API practice
+- Async keyword and await operator
+	- async marked functions return promises
+	- await operator lets you set variables = promises eg) data = await myAsychronousFunction()

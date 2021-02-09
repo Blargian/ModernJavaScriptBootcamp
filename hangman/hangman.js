@@ -74,7 +74,6 @@ class Hangman {
     }
 } 
 
-let game = new Hangman('cat',5)
-console.log(game.word)
+
 
 
