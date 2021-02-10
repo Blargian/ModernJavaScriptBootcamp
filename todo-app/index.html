@@ -3,30 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
     <title>To Do App</title>
     <script href="./style.css" rel="stylesheet"></script>
 </head>
 <body>
+    <div class="header">
+        <div class="container">
+            <h1 class="header__title">To-do App</h1>
+            <h2 class="header__subtitle">Just do it</h2>
+        </div>
+    </div>
 
-    <input id="filter-todo" type="text" placeholder="Search To Do">
-    <button id="todo-button">To do</button>
+    <div class="actions">
+        <div class="actions__container">
+            <input id="filter-todo" class="input" type="text" placeholder="Search To Do">
+            <label class="checkbox">
+                <input type="checkbox" id="hide-completed">
+                hide completed
+            </label>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <button id="todo-button">To do</button> -->
     <div id="to-dos">
-        <div></div>
         <!--Dynamic insert here-->
     </div>
  
     <form id="new-todo-form">
-        <input type="text" placeholder="Enter something to do" name="toDo">
-        <button>Add</button>
+        <input type="text" class="input" placeholder="Enter something to do" name="toDo">
+        <button class="button">Add</button>
     </form>
-
-    <label id="hide-completed">
-        <input type="checkbox">
-        Click to hide completed
-    </label>
-
-    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
-    <script src="./todo-functions.js"></script>
-    <script src="./todo-app.js"></script>
+    </div>
+   
+    <script src="/scripts/uuidv4.js"></script>
+    <script src="/scripts/todo-functions.js"></script>
+    <script src="/scripts/todo-app.js"></script>
 </body>
 </html>

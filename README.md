@@ -136,3 +136,13 @@ Everything here is pretty straightforward.
 - Async keyword and await operator
 	- async marked functions return promises
 	- await operator lets you set variables = promises eg) data = await myAsychronousFunction()
+
+## Section 12 - App Themes
+
+### What did I learn? 
+
+- Applied styling to the hangman app
+- Applied styling to the Notes app
+- Applied styling to the to-do app
+- ES6 object shorthand (no need to do ,text: text, you can just say ,text,)
+- Hosting a JavaScript application

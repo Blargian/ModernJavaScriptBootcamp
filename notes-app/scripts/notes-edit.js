@@ -37,7 +37,7 @@ body.addEventListener('change',(e) => {
 
 remove.addEventListener('click',(e) =>{
     removeNote(note.id,notes)
-    saveNote(JSON.stringify(notes))
+    saveNote(notes)
     location.assign(`/index.html`)
 })
 

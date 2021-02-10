@@ -30,7 +30,6 @@ document.querySelector('#search-text').addEventListener('input',(e) =>{
 
 document.querySelector('#filter-by').addEventListener('change',(e) =>{
     filters.sortBy = e.target.value
-    debugger;
     renderNotes(notes,filters)
 })
 

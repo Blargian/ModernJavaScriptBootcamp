@@ -51,9 +51,10 @@ const toggleToDo = (id) =>{
 //generateTodoDOM
 const generateTodoDOM = (toDoObject)=>{
 
-        //create the container element 
-        const toDoItem = document.createElement('div') 
-        //create the checkbox
+        const toDoItem = document.createElement('label')
+        toDoItem.classList.add('list-item')
+        const containerElement = document.createElement('div')
+        containerElement.classList.add('list-item__container')
         const checkBox = document.createElement('input')
         checkBox.setAttribute('type','checkbox')
         checkBox.checked = toDoObject.completed
@@ -67,14 +68,16 @@ const generateTodoDOM = (toDoObject)=>{
         text.textContent = `${toDoObject.text}`
         //create the cancel button
         const cancel = document.createElement('button')
-        cancel.textContent='X'
+        cancel.textContent='remove'
+        cancel.classList.add('button','button--text')
         cancel.addEventListener('click',()=>{
             removeToDo(toDoObject.id)
         })
 
         //Append the elements to the div
-        toDoItem.appendChild(checkBox)
-        toDoItem.appendChild(text)
+        containerElement.appendChild(checkBox)
+        containerElement.appendChild(text)
+        toDoItem.appendChild(containerElement)
         toDoItem.appendChild(cancel)
 
         return toDoItem
@@ -95,6 +98,13 @@ const generateSummaryDOM = (todo) =>{
     document.querySelector('#to-dos').innerHTML = ''
 
     const toDoLeft = document.createElement('h2')
-    toDoLeft.textContent = `There are ${left} items left to do`
+    toDoLeft.classList.add('list-title')
+    
+    if(left===1){
+        toDoLeft.textContent = `You have ${left} todo`
+    } else {
+        toDoLeft.textContent = `You have ${left} todos`
+    }
+    
     return toDoLeft
 }

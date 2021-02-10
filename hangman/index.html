@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman</title>
+    <link href="/styles/styles.css" rel="stylesheet">
+    <title>Hangman Game</title>
 </head>
 <body>
-    <h1>Take a guess</h1>
-    <h2 id="puzzle"></h2>
-    <p id="guesses"></p>
-    <button id="reset">Reset</button>
-    <script src="api.js"></script>
-    <script src="requests.js"></script>
-    <script src="hangman.js"></script>
-    <script src="app.js"></script>
+
+    <div>
+        <div id="puzzle" class="puzzle"></div>
+        <p id="guesses"></p>
+        <button id="reset" class="button">Reset</button>
+    </div>
+
+    <script src="/scripts/api.js"></script>
+    <script src="/scripts/requests.js"></script>
+    <script src="/scripts/hangman.js"></script>
+    <script src="/scripts/app.js"></script>
 </body>
 </html>
