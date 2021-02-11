@@ -164,3 +164,6 @@ Everything here is pretty straightforward.
 - Development vs Production environments
 - Enabling sourcemaps for debugging
 - Refactored the Hangman app to use webpack
+- The rest parameter ... [used in the parameter list]
+- The spread parameter ... [used before an array to covert array into individual arguments]
+	- Useful for manking copies of arrays
