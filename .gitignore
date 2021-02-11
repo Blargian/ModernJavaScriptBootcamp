@@ -1,1 +1,5 @@
-/Hangman/api.js
+/Hangman/src/api.js
+/boilerplate/node_modules
+/Hangman/node_modules
+/notes-app/node_modules
+/todo-app/node_modules

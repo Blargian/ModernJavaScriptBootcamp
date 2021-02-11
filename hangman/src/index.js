@@ -1,3 +1,6 @@
+import Hangman from './hangman'
+import getPuzzle from './requests'
+
 const puzzleEl = document.querySelector('#puzzle')
 const guessesEl = document.querySelector('#guesses')
 let game1
@@ -8,7 +11,7 @@ window.addEventListener('keypress', (e) => {
     render()
 })
 
-const render = () => {
+export const render = () => {
     puzzleEl.innerHTML = ''
     guessesEl.textContent = game1.statusMessage
 

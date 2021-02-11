@@ -146,3 +146,21 @@ Everything here is pretty straightforward.
 - Applied styling to the to-do app
 - ES6 object shorthand (no need to do ,text: text, you can just say ,text,)
 - Hosting a JavaScript application
+
+## Section 13 - JS with Babel and Webpack
+
+### What did I learn? 
+
+- Browser compatibility is a problem for newer features of the language
+- What Babel is 
+- How to setup babel to generate a bundle.js file from a src file 
+- Setting up babel to automatically build on change detected using '--watch'
+- Basic webpack configuration 
+- The JS modules system in webpack
+- Imports and exports (named vs default)
+	- default can have at most one export
+	- named can have many exports
+- Adding Babel into webpack
+- Development vs Production environments
+- Enabling sourcemaps for debugging
+- Refactored the Hangman app to use webpack
