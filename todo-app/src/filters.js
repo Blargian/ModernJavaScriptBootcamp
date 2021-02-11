@@ -1,5 +1,5 @@
 // Set up filters default object
-const filters = {
+let filters = {
     searchText: '',
     hideComplete: false
 }
@@ -7,7 +7,7 @@ const filters = {
 // Arguments: none
 // Return value: filters object
 
-export const getFilters = () =>{
+const getFilters = () =>{
     return filters
 }
 
@@ -15,12 +15,16 @@ export const getFilters = () =>{
 // Arguments: updates object with optional searchText or hideCompleted
 // Return value: none
 
-export const setFilters = (searchText, hideCompleted) => {
-    if(searchText){
+const setFilters = (searchText, hideCompleted) => {
+    if(searchText !== undefined){
         filters.searchText = searchText
-    } else if (hideCompleted){
+    }
+    
+    if(hideCompleted!==undefined){
         filters.hideComplete = hideCompleted
     }
+    
+
 }
 // Make sure to set up the exports
 
